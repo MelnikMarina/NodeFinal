@@ -25,7 +25,7 @@ app.post("/", (req, res) => {
     console.log(typeof(req.body[req.body.length-1]));// this would be the data sent with the request
     var add =req.body[req.body.length-1];
     db.run(sql,number_order++,add,1);
-    res.send(add);
+    res.send("running");
 });
 
 app.listen(3000,function(){
